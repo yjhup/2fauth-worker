@@ -97,7 +97,7 @@ jobs:
 
       # 数据库初始化与同步：基础 Schema 创建。后续增量演进由后端代码自愈完成。
       - name: Sync Database Schema
-        uses: cloudflare/wrangler-action@v5
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -173,7 +173,7 @@ jobs:
 
       # 部署到 Cloudflare Workers
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v5
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
