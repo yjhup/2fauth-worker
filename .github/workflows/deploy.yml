@@ -61,7 +61,7 @@ jobs:
 
       # 安装全部依赖
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       # 准备配置文件
       - name: Prepare Wrangler Config
